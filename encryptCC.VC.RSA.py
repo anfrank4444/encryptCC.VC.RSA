@@ -104,4 +104,6 @@ def rsa_decrypt(text, private_key):
     result = ""
     cipher_codes = text.split(",")
     for cipher_code in cipher_codes:
-        char_code =
+        char_code = pow(int(cipher_code), d, n)
+        result += chr(char_code)
+    return
